@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 
-from treatments import imc
+from app import imc
 
 # Instanciation de la sous-librairie FastAPI
 app = FastAPI()
@@ -72,3 +72,5 @@ async def post_imc(request: Request, weight: str=Form(...), size: str=Form()) ->
                 'message_error': 'Erreur de saisie', # message d'erreur à restituer
             },
         )
+
+# Lancement dans le terminal uvicorn app.main:app --reload
