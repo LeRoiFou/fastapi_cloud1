@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fastapi-cloud1
+    name: fastapi_cloud1
     env: python
     plan: free
     buildCommand: ""
